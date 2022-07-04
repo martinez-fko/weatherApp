@@ -1,7 +1,6 @@
 import React from "react";
 
 const Weather = ({ result, convert, isCelsius }) => {
-  console.log(result);
   return (
     <main className="card">
       <h1>Weather App</h1>

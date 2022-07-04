@@ -8,7 +8,7 @@ function App() {
   const img = result.weather?.[0].icon
 
   return (
-    <div className="App" style={ { backgroundImage: `url('process.env.PUBLIC_URL/images/${img}.jpg')`  } }>
+    <div className="App" style={ { backgroundImage: `url('https://github.com/martinez-fko/weatherApp/blob/main/public/images/${img}.jpg')`  } }>
       <Weather result={result} convert={convert} isCelsius={isCelsius} /> 
     </div>
   )

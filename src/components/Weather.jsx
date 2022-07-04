@@ -1,6 +1,7 @@
 import React from "react";
 
 const Weather = ({ result, convert, isCelsius }) => {
+  console.log(result);
   return (
     <main className="card">
       <h1>Weather App</h1>
@@ -14,7 +15,7 @@ const Weather = ({ result, convert, isCelsius }) => {
             src={`http://openweathermap.org/img/wn/${result.weather?.[0].icon}@2x.png `}
             alt="weather"
           />
-          <p>
+          <p className="degrees">
             {result.main?.temp} {isCelsius ? "°C" : "°F"}
           </p>
         </div>
@@ -22,10 +23,18 @@ const Weather = ({ result, convert, isCelsius }) => {
           <p className="title">{result.weather?.[0].description}</p>
           <p>
             {" "}
-            Wind Speed {result.wind?.speed} {isCelsius ? "m/s" : "h/s"}{" "}
+            Wind Speed{" "}
+            <span>
+              {" "}
+              {result.wind?.speed} {isCelsius ? "m/s" : "h/s"}{" "}
+            </span>
           </p>
-          <p>Clouds {result.clouds?.all}%</p>
-          <p>Pressure {result.main?.pressure} mb</p>
+          <p>
+            Clouds <span> {result.clouds?.all}% </span>
+          </p>
+          <p>
+            Pressure <span>{result.main?.pressure} mb </span>
+          </p>
         </div>
       </article>
       <button onClick={convert}>Degrees {isCelsius ? "°F" : "°C"} </button>

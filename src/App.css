@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .App {
   display: flex;
@@ -15,13 +19,53 @@
 }
 
 .card{
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.856);
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.75);
   padding: 3rem;
+  text-align: center;
+  border-radius: 10px;
 }
+
+
 
 .time{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+
+.degrees{
+  color: rgb(39, 85, 100);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.title{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(39, 85, 100);
+}
+
+.weather-info span{
+  color: rgb(39, 85, 100);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button{
+  margin-top: 1rem;
+  background-color: rgb(39, 85, 100);
+  border: none;
+  color: white;
+  padding: .5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button:hover{
+  background-color: white;
+  color: rgb(39, 85, 100);
 }

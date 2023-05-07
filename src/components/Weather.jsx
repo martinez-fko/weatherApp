@@ -11,7 +11,7 @@ const Weather = ({ result, convert, isCelsius }) => {
       <article className="time">
         <div className="weather">
           <img
-            src={`http://openweathermap.org/img/wn/${result.weather?.[0].icon}@2x.png `}
+            src={`http://openweathermap.org/img/wn/${result.weather?.[0].icon}@2x.png`}
             alt="weather"
           />
           <p className="degrees">
